@@ -1,0 +1,17 @@
+org: andypliu # Enter your tenant name here
+app: fullstackdemo # Enter your application name here
+service: fullstack-tasks # update
+
+provider:
+  name: aws
+  runtime: nodejs12.16.2
+  stage: dev
+  region: us-east-1
+  environment:
+    url: ${param:test_endpoint}
+
+functions:
+  testEndpoint:
+    handler: handler.testEndpoint
+    events:
+      - schedule: rate(5 minutes)

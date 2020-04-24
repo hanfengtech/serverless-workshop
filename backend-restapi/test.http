@@ -1,0 +1,6 @@
+POST https://o4eqolceg7.execute-api.us-east-1.amazonaws.com/dev/submit
+
+{
+    "name":"andy",
+    "email":"andy@hanfeng"
+}

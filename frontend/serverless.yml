@@ -1,0 +1,16 @@
+org: andypliu # Enter your tenant name here
+app: fullstackdemo # Enter your application name here
+service: fullstack-website
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-east-1
+
+plugins:
+  - serverless-finch
+
+custom:
+  client:
+    bucketName: hanfeng-demo-fullstack-ja189j # Change this to a universally unique bucket name
+    distributionFolder: ./build
